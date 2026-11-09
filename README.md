@@ -17,11 +17,14 @@ Developed IDS system that uses drone flight logs to detect GPS spoofing, an atta
 | Hyperparameter tuning | Bayesian optimization with Hyperopt TPE | Searches for better Inception-v3 settings. | Unseen-dataset accuracy improved from **46.44% → 99.06%**. |
 | Model evaluation | Held-out test split and separate 3DR IRIS dataset | Measures how well the models detect GPS spoofing on data from a different drone. | **VGG-19** reached **100%** on the original test split and **99.25%** on the unseen dataset. |
 
+
+Out-of-Distribution (OOD) in machine learning occurs when a model encounters test or real-world data that comes from a different probability distribution than the data it was trained on.
+
 ## Model Performance
 
 The models were evaluated on a held-out test split from the original UAV attack dataset and on a separate, unseen 3DR IRIS dataset.
 
-| Model | Original dataset test accuracy | Unseen 3DR IRIS accuracy |
+| Model | Original dataset test accuracy | Unseen 3DR IRIS accuracy, Out-of-Distribution (OOD) |
 |---|---:|---:|
 | **VGG-19** | **100%** | **99.25%** |
 | ResNet-152 | 100% | 99.00% |
